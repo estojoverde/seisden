@@ -4,7 +4,9 @@ venv/
 # Dados e Modelos (gerenciados pelo DVC)
 data/raw/
 data/processed/
+data/
 runs/
+logs/
 *.pth
 *.zip
 
