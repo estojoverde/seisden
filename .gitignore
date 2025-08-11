@@ -1,0 +1,28 @@
+# Ambiente Virtual
+venv/
+
+# Dados e Modelos (gerenciados pelo DVC)
+data/raw/
+data/processed/
+runs/
+*.pth
+
+# Arquivos Python compilados
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Arquivos de configuração do Jupyter
+.jupyter/
+# Configurações do Visual Studio Code
+.vscode/
+# Arquivos de configuração do DVC
+.dvc/
+# Arquivos temporários do sistema
+*.tmp
+*.temp
+# Arquivos de log
+*.log
+# Arquivos de cache do Python
+.cache/
