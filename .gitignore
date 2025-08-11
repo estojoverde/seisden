@@ -6,6 +6,8 @@ data/raw/
 data/processed/
 runs/
 *.pth
+*.zip
+
 
 # Arquivos Python compilados
 __pycache__/
