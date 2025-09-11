@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Union
 import torch
 import matplotlib.pyplot as plt
 
-from ..utils import PML_kw
+from ..core.utils import PML_kw
 
 # --- Compatibility shim: ensure torch.pi behaves like a tensor (has .item()) ---
 try:

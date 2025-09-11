@@ -58,3 +58,19 @@ class PML_Logger:
     def get_logger(self) -> logging.Logger:
         """Return the configured logger instance."""
         return self.logger
+
+
+# Convenience function for backward compatibility
+def get_logger(name: str = "seismic", **kwargs) -> logging.Logger:
+    """
+    Create a simple logger instance.
+    
+    Args:
+        name: Logger name
+        **kwargs: Additional arguments for PML_Logger
+        
+    Returns:
+        Logger instance
+    """
+    pml_logger = PML_Logger(name_prefix=name, **kwargs)
+    return pml_logger.get_logger()

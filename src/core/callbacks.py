@@ -1,4 +1,4 @@
-from .templates import PML_BasicCallback
+from ..visualization.templates import PML_BasicCallback
 import torch
 import numpy as np
 import math

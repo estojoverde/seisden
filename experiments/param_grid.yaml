@@ -1,0 +1,43 @@
+# experiments/param_grid.yaml
+# Parameter grid for hyperparameter sweeps
+
+# Learning rate sweep
+learning_rate:
+  - 1e-3
+  - 5e-4
+  - 1e-4
+  - 5e-5
+
+# Loss component weights
+penalty_weight:
+  - 0.5
+  - 1.0
+  - 2.0
+
+magnitude_weight:
+  - 0.3
+  - 0.5
+  - 0.7
+
+phase_weight:
+  - 0.1
+  - 0.3
+  - 0.5
+
+# Model architecture variants
+encoder:
+  - "resnet34"
+  - "resnet50"
+  - "efficientnet-b0"
+
+# Batch size variants
+batch_size:
+  - 4
+  - 8
+  - 16
+
+# Primary loss function types
+primary_loss:
+  - "mse"
+  - "l1"
+  - "huber"

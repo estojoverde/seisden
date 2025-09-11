@@ -1,0 +1,56 @@
+# experiments/spectral_config.yaml
+# Configuration file for seismic frequency recovery experiments
+
+# Experiment metadata
+experiment_name: "spectral_recovery_baseline"
+description: "Baseline experiment for seismic frequency recovery using U-Net with spectral loss"
+
+# Data configuration
+data_dir: "/path/to/your/seismic/data"  # Update this path
+img_size: [256, 256]
+train_split: 0.8
+val_split: 0.2
+
+# Training configuration
+epochs: 100
+batch_size: 8
+learning_rate: 1e-3
+weight_decay: 1e-4
+optimizer: "adam"  # adam, adamw, sgd
+
+# Model configuration
+encoder: "resnet34"  # resnet34, resnet50, efficientnet-b0, etc.
+encoder_weights: "imagenet"  # imagenet, null
+in_channels: 1
+classes: 1
+
+# Loss configuration
+loss_type: "seismic_recovery"
+penalty_weight: 1.0      # Weight for reconstruction penalty
+magnitude_weight: 0.5    # Weight for FFT magnitude penalty
+phase_weight: 0.3        # Weight for FFT phase penalty
+primary_loss: "mse"      # mse, l1, huber
+
+# System configuration
+device: "auto"           # auto, cuda, cpu
+num_workers: 4
+val_frequency: 5         # Validate every N epochs
+timeout: 7200           # Training timeout in seconds (2 hours)
+
+# Logging configuration
+log_level: "INFO"
+save_frequency: 10      # Save checkpoint every N epochs
+
+# Data augmentation (optional)
+augmentation:
+  enabled: false
+  rotation: 10         # degrees
+  scaling: 0.1         # factor
+  noise_std: 0.01      # additive noise
+
+# Advanced configuration
+advanced:
+  gradient_clipping: 1.0
+  scheduler_type: "cosine"  # cosine, step, plateau
+  early_stopping_patience: 20
+  mixed_precision: false

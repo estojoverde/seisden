@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from ..utils import PML_kw
+from ...core.utils import PML_kw
 
 __all__ = [
     "PML_safe_group_count",

@@ -8,7 +8,7 @@ from torch.utils.data import Dataset
 
 
 # --- Local Imports ---
-from .logging import PML_Logger
+from ..core.logging import PML_Logger
 
 
 class PML_BasicCallback:

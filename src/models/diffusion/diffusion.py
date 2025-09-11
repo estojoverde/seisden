@@ -8,8 +8,8 @@ import math
 import torch
 from torch import nn
 
-from ..utils import PML_kw
-from ..features.fourier import PML_build_fourier_feature_stack
+from ...core.utils import PML_kw
+from ...features.fourier import PML_build_fourier_feature_stack
 from .unet_blocks import PML_UNet
 
 

@@ -17,7 +17,7 @@ import time
 
 # --- Local Imports ---
 from .logging import PML_Logger
-from .templates import PML_BasicCallback
+from ..visualization.templates import PML_BasicCallback
 
 
 

@@ -13,9 +13,9 @@ from torch import nn
 from torch.utils.data import DataLoader, Dataset
 
 # Local imports
-from src.dataset import PML_NpyPairedSeismic, PML_apply_lowcut_fft
-from src.metrics import PML_snr_lowband, PML_spectral_l2_bands
-from src.utils import PML_kw
+from ..data.dataset import PML_NpyPairedSeismic, PML_apply_lowcut_fft
+from ..core.metrics import PML_snr_lowband, PML_spectral_l2_bands
+from ..core.utils import PML_kw
 
 # We import diffusion and unet lazily inside builders to avoid import issues for users who only need utilities.
 

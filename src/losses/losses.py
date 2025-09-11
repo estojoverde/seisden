@@ -5,13 +5,21 @@ from typing import Any, Sequence, Tuple
 
 import torch
 
-from .metrics import PML_spectral_l2_bands
+from ..core.metrics import PML_spectral_l2_bands
 
-from .utils import PML_kw
+from ..core.utils import PML_kw
+
+# Import spectral losses for frequency recovery
+from .losses_spectral import *
 
 __all__ = [
     "PML_spectral_l2_per_band",
     "PML_lowband_weighted_loss",
+    # Spectral recovery losses
+    "PML_SeismicRecoveryLoss",
+    "PML_SpectralMSELoss", 
+    "PML_ReconstructionPenaltyLoss",
+    "create_spectral_loss",
 ]
 
 
