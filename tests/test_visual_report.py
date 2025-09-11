@@ -6,7 +6,7 @@ import numpy as np
 import torch
 
 from src.dataset import PML_apply_lowcut_fft
-from src.visualization import (
+from Projetos.BaseTrainer.seisden.src.plot.visualization import (
     PML_save_examples_grid,
     PML_plot_mean_spectrum_compare,
 )

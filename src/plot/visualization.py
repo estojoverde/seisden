@@ -11,7 +11,7 @@ import matplotlib
 matplotlib.use("Agg")  # safe for headless test runners
 import matplotlib.pyplot as plt
 
-from .utils import PML_kw
+from ..utils import PML_kw
 
 
 __all__ = [

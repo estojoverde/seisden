@@ -4,7 +4,7 @@ import tempfile
 import numpy as np
 import torch
 
-from src.visualization import (
+from Projetos.BaseTrainer.seisden.src.plot.visualization import (
     PML_plot_time_section,
     PML_plot_mean_spectrum,
     PML_plot_mean_spectrum_compare,

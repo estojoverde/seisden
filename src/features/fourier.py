@@ -138,7 +138,7 @@ def PML_build_fourier_feature_stack(
         b_include_real_imag (bool) = True
         b_include_angle (bool) = True
         b_include_logmag (bool) = True
-        b_include_lfmask (bool) = True
+        b_include_lfradialmask (bool) = True
 
         # Mask options (forwarded)
         f_d_spatial (float) = 1.0
@@ -159,7 +159,7 @@ def PML_build_fourier_feature_stack(
     b_include_real_imag = bool(PML_kw("b_include_real_imag", kwargs, True))
     b_include_angle = bool(PML_kw("b_include_angle", kwargs, True))
     b_include_logmag = bool(PML_kw("b_include_logmag", kwargs, True))
-    b_include_lfmask = bool(PML_kw("b_include_lfmask", kwargs, True))
+    b_include_lfradialmask = bool(PML_kw("b_include_lfradialmask", kwargs, True))
 
     b_return_dict = bool(PML_kw("b_return_dict", kwargs, False))
 
@@ -197,7 +197,7 @@ def PML_build_fourier_feature_stack(
         l_feats.append(logmag)
         dic_feats["logmag"] = logmag
 
-    if b_include_lfmask:
+    if b_include_lfradialmask:
         mask = PML_radial_lf_mask2d(
             n_H=H,
             n_W=W,
